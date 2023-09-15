@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: #FAFAFA;
+  display: flex;
+  justify-content: center;
+}
+
+.background{
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("http://127.0.0.1:5500/css/images/Bitmap.jpeg"), linear-gradient(225deg, #5596FF 0%, #AC2DEB 100%);
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.todo-conteiner {
+  width: 540px;
+  margin-top: 70px;
+}
+
+.todo{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2{
+  color: #FFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 15px;
+}
+
+.moon{
+  cursor: pointer;
+}
+
+.create-todo{
+  width: 100%;
+  height: 64px;
+  border-radius: 5px;
+  background: #FFF;
+  margin-top: 48px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.checkbox-item{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #E3E4F1;;
+  position: relative;
+}
+
+.checkbox1{
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.input-div{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: url("http://127.0.0.1:5500/css/images/checkbox.jpg"), linear-gradient(#55DDFF, #C058F3);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+#checkbox-div{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: url("http://127.0.0.1:5500/css/images/checkbox.jpg"), linear-gradient(#55DDFF, #C058F3);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+.checkbox1:checked + #checkbox-div{
+  opacity: 1;
+}
+.input{
+  color: #9495A5;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  outline: none;
+  border: none;
+  width: 400px;
+}
+ul{
+  border-radius: 5px;
+  background: #FFF;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
+}
+li{
+  text-decoration: none;
+  list-style: none;
+  width: 100%;
+  height: 64px;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px;
+  border-bottom: 1px solid #E3E4F1;;
+}
+h3{
+  color: #494C6B;
+  font-family: Josefin Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.25px;
+}
+.todo-list{
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.ul-footers{
+  width: 100%;
+  height: 64px;
+  background: white;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left{
+  color: #9495A5;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.194px;
+  cursor: pointer;
+}
+h4{
+  color: #9495A5;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.194px;
+  cursor: pointer;
+}
+.active-texts{
+  display: flex;
+  gap: 19px;
+}
+.all{
+  color: #3A7CFD;
+}
+.drag{
+  text-align: center;
+  margin-top: 49px;
+}
+.completed{
+  text-decoration: line-through;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  
+}
+
+
+/* 
+.input {
+  margin-bottom: 20px ;
+  margin-top: 48px;
+  width: 540px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #FFF;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
+  color: #9495A5;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.25px;
+}*/
+
+.completed{
+  text-decoration: line-through;
+}
+
+#add-task{
+  display: inline;
+}
+
+#update-task{
+  display: none;
+}
+
+.editing #add-task{
+  display: none;
+}
+
+.editing #update-task{
+  display: inline;
+}
